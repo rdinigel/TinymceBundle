@@ -49,13 +49,14 @@ class StfalconTinymceExtension extends \Twig_Extension
     /**
      * TinyMce initializations
      */
-    public function tinymce_init()
+    public function tinymce_init($buttons)
     {
         //$assets = $this->getContainer()->get('templating.helper.assets');
         return ($this->getContainer()->get('templating')->render('StfalconTinymceBundle:Script:init.html.twig', array(
             'tinymce_config_json' => json_encode($this->getContainer()->getParameter('stfalcon_tinymce.config')),
             'include_jquery' => $this->getContainer()->getParameter('stfalcon_tinymce.include_jquery'),
             'textarea_class' => $this->getContainer()->getParameter('stfalcon_tinymce.textarea_class'),
+			'buttons' => $buttons,
         )));
     }
 
