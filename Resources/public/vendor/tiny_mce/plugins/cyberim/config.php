@@ -32,9 +32,9 @@ $conf['session.valid_users_groups'] = '/^.+$/';
   File System options
 */
 //путь для заключительного url
-$conf['filesystem.path'] = '/uploads/';
+$conf['filesystem.path'] = '/uploads/tinymce/';
 //относительный путь к файлам пользователя
-$conf['filesystem.files_path'] = '../../../../../../uploads/';
+$conf['filesystem.files_path'] = '../../../../../../uploads/tinymce/';
 //регулярное выражения описания пропускаемых каталогов
 $conf['filesystem.exclude_directory_pattern'] = '/^_thumb$|^_system$/i';
 //права устанавливаемые на создаваемые директории
@@ -88,4 +88,8 @@ $conf['stream.mimes'] = array(	'psd'	=>	'application/x-photoshop',
 								'png'	=>	array('image/png',  'image/x-png'),
 								'tiff'	=>	'image/tiff',
 								'tif'	=>	'image/tiff' );
+
+//var_dump($conf);
+//exit();
+
 ?>
